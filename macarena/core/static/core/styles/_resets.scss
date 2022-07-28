@@ -1,0 +1,26 @@
+*{	
+    margin: 0;
+	padding:0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p,div,strong,a,li,input{
+    font-family: 'Montserrat', sans-serif;
+
+}
+.secular{
+    font-family: 'Secular One', sans-serif;
+}
+.fcc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fcs{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.fr{
+    display: flex;
+    flex-direction: row;
+}
