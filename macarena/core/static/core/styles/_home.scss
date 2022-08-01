@@ -1,0 +1,16 @@
+.redes-container{
+    width: 30%;
+}
+
+@media (max-width: 766px) {
+    .presentacion1{
+        text-align: center;
+    }
+    .presentacion2{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .redes-container{
+        width: 70%;
+    }
+}
