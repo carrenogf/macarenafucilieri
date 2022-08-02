@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<div class="row mt-1 bg-dark text-light">
+  <div class="col-12">
+    <marquee scrollamount="10">
+      {% for cotizacion in dolar %}
+      {{cotizacion.0}} : {{cotizacion.1}} |
+      {% endfor %}
+    </marquee>
+  </div>
+</div>
 <div class="container">
+
   <div class="row mt-5">
     <h1 class="text-center">Contadora Macarena Fucilieri</h1>
   </div>
@@ -13,22 +23,33 @@
       <div>
       <h2>¿Quien soy?</h2>
       <p>Soy Contadora Pública matriculada en el <a class="text-muted" target="_blank" href="https://www.cgcetucuman.org.ar/">Colegio de graduados en Ciencias Económicas de Tucumán</a>,
-      me dedico al asesoramiento impositivo, contable y financiero de pymes y emprendedores argentinos
+      me dedico al asesoramiento impositivo, contable y financiero de pymes y emprendedores argentinos.
       </p>
       </div>
     </div>
   </div>
   <div class="row mt-5 d-flex presentacion2">
     <div class="col-12 col-md-6">
-      <h2>¿Quien soy?</h2>
-      <p>Soy Contadora Pública matriculada en el <a class="text-muted" target="_blank" href="https://www.cgcetucuman.org.ar/">Colegio de graduados en Ciencias Económicas de Tucumán</a>,
-      me dedico al asesoramiento impositivo, contable y financiero de pymes y emprendedores argentinos
+      <h2>Mi Trabajo</h2>
+      <p>
+        Es hacer que mis clientes se centren en su negocio, su sueño, ocupandome de la burocracia de los impuestos, la contabilidad y administración. Te ayudo desde
+        el nacimiento de tu proyecto, y te ayudaré en cada paso, brindando mis conocimientos y experiencia en negocios.
       </p>
     </div>
     <div class="col-12 col-md-6">
       <img class= "img-fluid" src="https://github.com/carrenogf/imagenes/blob/main/macarenafucilieriweb/trabajo-equipo2-min.png?raw=true" alt="trabajo-equipo">
     </div>
   </div>
+  <div class="row bg-dark mt-5 text-center">
+    <div class="col-12  text-light p-5">
+      <h2><i class="fas fa-exclamation-circle"></i> Contrata a un Profesional Matriculado</h2>
+      <p>Te aseguras de contar con alguien con conocimientos actualizados y cuya actividad está regulada 
+        por la ley. Yo cuento con matricula activa en el Colegio de Graduados en Ciencias Económicas de Tucumán, 
+        ¡di <strong>NO</strong> al ejercicio ilegal de la Profesión!</p>
+        
+    </div>
+  </div>
+
 </div>
 
 {% endblock %}
