@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<!-- barra cotización dolar -->
 <div class="row mt-1 bg-dark text-light">
-  <div class="col-12">
-    <marquee scrollamount="10">
+  <div class="col-12 fcc">
+    <marquee scrollamount="9">
+      Cotización Dolar/Peso Argentino: 
       {% for cotizacion in dolar %}
       {{cotizacion.0}} : {{cotizacion.1}} |
       {% endfor %}
@@ -11,10 +13,11 @@
   </div>
 </div>
 <div class="container">
-
+<!-- Titulo -->
   <div class="row mt-5">
     <h1 class="text-center">Contadora Macarena Fucilieri</h1>
   </div>
+<!-- Presentación 1 -->
   <div class="row mt-5 d-flex presentacion1">
     <div class="col-12 col-md-6">
       <img class= "img-fluid" src="https://github.com/carrenogf/imagenes/blob/main/macarenafucilieriweb/trabajo-equipo-min.png?raw=true" alt="trabajo-equipo">
@@ -28,6 +31,7 @@
       </div>
     </div>
   </div>
+<!-- Presentación 2 -->
   <div class="row mt-5 d-flex presentacion2">
     <div class="col-12 col-md-6">
       <h2>Mi Trabajo</h2>
@@ -40,6 +44,7 @@
       <img class= "img-fluid" src="https://github.com/carrenogf/imagenes/blob/main/macarenafucilieriweb/trabajo-equipo2-min.png?raw=true" alt="trabajo-equipo">
     </div>
   </div>
+<!-- Profesional matriculado -->
   <div class="row bg-dark mt-5 text-center">
     <div class="col-12  text-light p-5">
       <h2><i class="fas fa-exclamation-circle"></i> Contrata a un Profesional Matriculado</h2>
@@ -49,7 +54,47 @@
         
     </div>
   </div>
-
+</div>
+<!-- servicios y contacto -->
+<div class="row mt-5 servicios_contacto">
+  <!-- servicios -->
+  <div class="col-lg-6 col-md-12">
+    <div class="home__serviceTit"><h2>Servicios</h2></div>
+    <div class="row d-flex justify-content-around home__serviceCard_cont">
+      <div class="col-12 fcc home__serviceCard">
+        <h3>Impuestos</h3>
+      </div>
+      <div class="col-12 fcc home__serviceCard">
+        <h3>Contabilidad</h3>
+      </div>
+      <div class="col-12 fcc home__serviceCard">
+        <h3>Finanzas corporativas</h3>
+      </div>
+      <div class="col-12 fcc home__serviceCard">
+        <h3>+Mas</h3>
+      </div>
+    </div>
+  </div>
+  <!-- formulario de contacto -->
+  <div class="col-lg-6 col-md-12 mt-5">
+    <h2>Nos pongamos en contacto!</h2>
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="email_input">E-mail</label>
+        <input type="email" class="form-control" id="email_input" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="nombre_input">Nombre y apellido</label>
+        <input type="text" class="form-control" id="nombre_input" placeholder="Nombre y apellido">
+      </div>
+      <div class="form-group">
+        <label for="consulta_textarea">Consulta</label>
+        <textarea id="consulta_textarea" class="form-control" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success mt-2">Enviar</button>
+    </form>
+  </div>
 </div>
 
 {% endblock %}
