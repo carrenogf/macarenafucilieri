@@ -2,7 +2,7 @@
     width: 30%;
 }
 .servicios_contacto{
-    background-image: url('https://github.com/carrenogf/imagenes/blob/main/macarenafucilieriweb/laptop-gad913608c_1920-min.jpg?raw=true');
+    // imagen background en el html para manejarla por backend
     padding: 15px;
     background-size: cover;
     .home__serviceTit{
@@ -17,10 +17,20 @@
             text-align: center;
             margin: 5px;
             width: 80%;
+            &:hover{
+                background-color: rgba($color: $main-color, $alpha: 0.3);
+            }
         }
     }
-
 }
+.carousel-item-dark{
+    position: absolute;
+    background-color: rgb($color:#000000,$alpha: 0.4);
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
 @media (max-width: 766px) {
     .presentacion1{
         text-align: center;

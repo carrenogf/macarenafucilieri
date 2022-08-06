@@ -2,46 +2,48 @@
 {% load static %}
 {% block content %}
 <!-- barra cotización dolar -->
-<div class="row mt-1 bg-dark text-light">
-  <div class="col-12 fcc">
-    <marquee scrollamount="9">
-      Cotización Dolar/Peso Argentino: 
-      {% for cotizacion in dolar %}
-      {{cotizacion.0}} : {{cotizacion.1}} |
-      {% endfor %}
-    </marquee>
+{% if tema %}
+
+  {% if tema.mostrar_dolar %}
+  <div class="row mt-1 bg-dark text-light">
+    <div class="col-12 fcc">
+      <marquee scrollamount="9">
+        Cotización Dolar/Peso Argentino: 
+        {% for cotizacion in dolar %}
+        {{cotizacion.0}} : {{cotizacion.1}} |
+        {% endfor %}
+      </marquee>
+    </div>
   </div>
-</div>
+  {% endif %}
+  
+
+ 
 <div class="container">
 <!-- Titulo -->
   <div class="row mt-5">
-    <h1 class="text-center">Contadora Macarena Fucilieri</h1>
+    <h1 class="text-center">{{tema.titulo_principal}}</h1>
   </div>
 <!-- Presentación 1 -->
   <div class="row mt-5 d-flex presentacion1">
     <div class="col-12 col-md-6">
-      <img class= "img-fluid" src="https://github.com/carrenogf/imagenes/blob/main/macarenafucilieriweb/trabajo-equipo-min.png?raw=true" alt="trabajo-equipo">
+      <img class= "img-fluid" src="{{tema.imagen_1.url}}" alt="trabajo-equipo">
     </div>
     <div class="col-12 col-md-6">
       <div>
-      <h2>¿Quien soy?</h2>
-      <p>Soy Contadora Pública matriculada en el <a class="text-muted" target="_blank" href="https://www.cgcetucuman.org.ar/">Colegio de graduados en Ciencias Económicas de Tucumán</a>,
-      me dedico al asesoramiento impositivo, contable y financiero de pymes y emprendedores argentinos.
-      </p>
+      <h2>{{tema.titulo1}}</h2>
+      <p>{{tema.texto1}}</p>
       </div>
     </div>
   </div>
 <!-- Presentación 2 -->
   <div class="row mt-5 d-flex presentacion2">
     <div class="col-12 col-md-6">
-      <h2>Mi Trabajo</h2>
-      <p>
-        Es hacer que mis clientes se centren en su negocio, su sueño, ocupandome de la burocracia de los impuestos, la contabilidad y administración. Te ayudo desde
-        el nacimiento de tu proyecto, y te ayudaré en cada paso, brindando mis conocimientos y experiencia en negocios.
-      </p>
+      <h2>{{tema.titulo2}}</h2>
+      <p>{{tema.texto2}}</p>
     </div>
     <div class="col-12 col-md-6">
-      <img class= "img-fluid" src="https://github.com/carrenogf/imagenes/blob/main/macarenafucilieriweb/trabajo-equipo2-min.png?raw=true" alt="trabajo-equipo">
+      <img class= "img-fluid" src="{{tema.imagen_2.url}}" alt="trabajo-equipo">
     </div>
   </div>
 <!-- Profesional matriculado -->
@@ -56,23 +58,23 @@
   </div>
 </div>
 <!-- servicios y contacto -->
-<div class="row mt-5 servicios_contacto">
+<div class="row mt-5 servicios_contacto" style="background-image:url('{{tema.imagen_Servicios.url}}');">
   <!-- servicios -->
   <div class="col-lg-6 col-md-12">
     <div class="home__serviceTit"><h2>Servicios</h2></div>
     <div class="row d-flex justify-content-around home__serviceCard_cont">
-      <div class="col-12 fcc home__serviceCard">
-        <h3>Impuestos</h3>
-      </div>
-      <div class="col-12 fcc home__serviceCard">
-        <h3>Contabilidad</h3>
-      </div>
-      <div class="col-12 fcc home__serviceCard">
-        <h3>Finanzas corporativas</h3>
-      </div>
-      <div class="col-12 fcc home__serviceCard">
-        <h3>+Mas</h3>
-      </div>
+      <a href="#" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
+        <h3>{{tema.servicio_1}}</h3>
+      </a>
+      <a href="#" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
+        <h3>{{tema.servicio_2}}</h3>
+      </a>
+      <a href="#" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
+        <h3>{{tema.servicio_3}}</h3>
+      </a>
+      <a href="#" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
+          <h3>{{tema.servicio_4}}</h3>
+      </a>
     </div>
   </div>
   <!-- formulario de contacto -->
@@ -97,4 +99,5 @@
   </div>
 </div>
 
+{% endif %}
 {% endblock %}

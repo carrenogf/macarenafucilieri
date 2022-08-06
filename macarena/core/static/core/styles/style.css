@@ -34,7 +34,6 @@ h1, h2, h3, h4, h5, h6, p, div, strong, a, li, input {
 }
 
 .servicios_contacto {
-  background-image: url("https://github.com/carrenogf/imagenes/blob/main/macarenafucilieriweb/laptop-gad913608c_1920-min.jpg?raw=true");
   padding: 15px;
   background-size: cover;
 }
@@ -51,6 +50,17 @@ h1, h2, h3, h4, h5, h6, p, div, strong, a, li, input {
   text-align: center;
   margin: 5px;
   width: 80%;
+}
+.servicios_contacto .home__serviceCard_cont .home__serviceCard:hover {
+  background-color: rgba(154, 208, 211, 0.3);
+}
+
+.carousel-item-dark {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 766px) {
