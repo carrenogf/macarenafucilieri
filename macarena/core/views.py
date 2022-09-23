@@ -14,4 +14,5 @@ def serviciosView(request):
     servicios = Servicio.objects.all()
     context["servicios"] = servicios
     context["range_servicios"] = range(len(servicios))
+    context['tema'] = Home.objects.get(selecionado=True)
     return render(request,'Servicio_detail.html',context=context)

@@ -56,5 +56,14 @@
     </button >
   </div>
   {% endif %}
+  
+  {% if tema %}
+    {% if tema.articulo_servicios %}
+      <div class="row mt-5">{{tema.articulo_servicios|safe}}</div>
+    {% endif %}
+  {% endif %}
+    
+
+
 </div>
 {% endblock %}

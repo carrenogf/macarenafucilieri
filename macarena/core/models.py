@@ -20,6 +20,7 @@ class Home(models.Model):
     servicio_3=models.CharField(max_length=50)
     servicio_4=models.CharField(max_length=50)
     articulo = RichTextField(blank=True,null=True)
+    articulo_servicios = RichTextField(blank=True,null=True)
     def __str__(self):
         return self.nombre_tema
     
