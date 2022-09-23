@@ -56,23 +56,32 @@
         
     </div>
   </div>
+  <!-- Articulo ckeditor -->
+ 
+    {% if tema.articulo %}
+    <div class="row mt-5">{{tema.articulo|safe}}</div>
+      
+    {% endif %}
+    
+  <!-- Articulo ckeditor -->
 </div>
+
 <!-- servicios y contacto -->
 <div class="row mt-5 servicios_contacto" style="background-image:url('{{tema.imagen_Servicios.url}}');">
   <!-- servicios -->
   <div class="col-lg-6 col-md-12">
     <div class="home__serviceTit"><h2>Servicios</h2></div>
     <div class="row d-flex justify-content-around home__serviceCard_cont">
-      <a href="#" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
+      <a href="{% url 'servicios' %}" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
         <h3>{{tema.servicio_1}}</h3>
       </a>
-      <a href="#" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
+      <a href="{% url 'servicios' %}" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
         <h3>{{tema.servicio_2}}</h3>
       </a>
-      <a href="#" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
+      <a href="{% url 'servicios' %}" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
         <h3>{{tema.servicio_3}}</h3>
       </a>
-      <a href="#" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
+      <a href="{% url 'servicios' %}" class="col-12 fcc home__serviceCard text-decoration-none text-dark">
           <h3>{{tema.servicio_4}}</h3>
       </a>
     </div>

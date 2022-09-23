@@ -1,6 +1,7 @@
 from django.db import models
 from django.forms import URLField
 from .fields import UniqueBooleanField
+from ckeditor.fields import RichTextField
 # Create your models here.
 class Home(models.Model):
     nombre_tema = models.CharField(max_length=200)
@@ -18,7 +19,7 @@ class Home(models.Model):
     servicio_2=models.CharField(max_length=50)
     servicio_3=models.CharField(max_length=50)
     servicio_4=models.CharField(max_length=50)
-
+    articulo = RichTextField(blank=True,null=True)
     def __str__(self):
         return self.nombre_tema
     

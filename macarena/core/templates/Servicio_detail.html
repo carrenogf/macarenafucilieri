@@ -24,10 +24,10 @@
             <div class="carousel-item active">
               <img class="d-block w-100" src="{{servicio.image.url}}" alt="{{servicio.nombre}}">
               <div class="carousel-item-dark"></div>
-              <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-                <h2>{{servicio.nombre}}</h2>
-                <p>{{servicio.subtitulo}}</p>
-                <p></p>
+              <div class="servicio carousel-caption d-flex flex-column justify-content-center h-100">
+                <h2 class="servicio__titulo">{{servicio.nombre}}</h2>
+                <p class="servicio__subtitulo">{{servicio.subtitulo}}</p>
+                <p class="servicio__descripcion">{{servicio.descripcion}}</p>
              </div>
             </div>
           {% else %}
@@ -35,10 +35,10 @@
             
             <img class="d-block w-100" src="{{servicio.image.url}}" alt="{{servicio.nombre}}">
             <div class="carousel-item-dark"></div>
-            <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-              <h2>{{servicio.nombre}}</h2>
-              <p>{{servicio.subtitulo}}</p>
-              
+            <div class="servicio carousel-caption d-flex flex-column justify-content-center h-100">
+              <h2 class="servicio__titulo">{{servicio.nombre}}</h2>
+              <p class="servicio__subtitulo">{{servicio.subtitulo}}</p>
+              <p class="servicio__descripcion">{{servicio.descripcion}}</p>
             </div>
           </div>
           {% endif %}
