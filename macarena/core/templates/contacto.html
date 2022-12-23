@@ -57,7 +57,15 @@
       </div>
       <button type="submit" class="btn btn-success mt-2">Enviar</button>
     </form>
-    {{mensaje}}
   </div>
+  {% if mensaje %}
+    <script>
+        swal.fire({
+            "title":"Gracias por tu Consulta!",
+            "text": "{{mensaje}}",
+            "icon":"success"
+        })
+    </script>
+  {% endif %}
 </div>
 {% endblock %}
