@@ -66,7 +66,7 @@
 </div>
 
 <!-- servicios y contacto -->
-<div class="row mt-5 servicios_contacto" style="background-image:url('{{tema.imagen_Servicios.url}}');">
+<div class="row mt-5 servicios_contacto" id="servicios_contacto" style="background-image:url('{{tema.imagen_Servicios.url}}');">
   <!-- servicios -->
   <div class="col-lg-6 col-md-12">
     <div class="home__serviceTit"><h2>Servicios</h2></div>
@@ -88,26 +88,61 @@
   <!-- formulario de contacto -->
   <div class="col-lg-6 col-md-12 mt-5">
     <h2>Nos pongamos en contacto!</h2>
-    <form method="post">
+    <form action="#servicios_contacto" class="form" method="post" id="form">
       {% csrf_token %}
+      <!-- nombre y apellido -->
       <div class="form-group">
-        <label for="email_input">E-mail</label>
-        <input type="email" class="form-control" id="email_input" name="email" placeholder="Email">
+        <label for="id_nombre">Nombre y apellido</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="id_nombre" 
+          name="nombre" 
+          maxlength="60" 
+          placeholder="Nombre y apellido"
+          required="required"
+        >
       </div>
+      <!-- Email -->
       <div class="form-group">
-        <label for="nombre_input">Nombre y apellido</label>
-        <input type="text" class="form-control" id="nombre_input" name="nombre" placeholder="Nombre y apellido">
+        <label for="id_email">E-mail</label>
+        <input 
+          type="email" 
+          class="form-control" 
+          id="id_email" 
+          maxlength="254" 
+          name="email" 
+          placeholder="Email"
+          required="required"
+          >
       </div>
+      <!-- Asunto -->
       <div class="form-group">
-        <label for="asunto_input">Asunto</label>
-        <input type="text" class="form-control" id="nombre_input" name="asunto" placeholder="Asunto">
+        <label for="id_asunto">Asunto</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="id_asunto" 
+          name="asunto" 
+          placeholder="Asunto"
+          required="required"
+        >
       </div>
+      <!-- Consulta -->
       <div class="form-group">
-        <label for="consulta_textarea">Consulta</label>
-        <textarea id="consulta_textarea" class="form-control" name="consulta" rows="5"></textarea>
+        <label for="id_consulta">Consulta</label>
+        <textarea 
+          id="id_consulta" 
+          class="form-control" 
+          name="consulta"
+          rows="5"
+          required="required"
+          >
+        </textarea>
       </div>
       <button type="submit" class="btn btn-success mt-2">Enviar</button>
     </form>
+    {{mensaje}}
   </div>
 </div>
 

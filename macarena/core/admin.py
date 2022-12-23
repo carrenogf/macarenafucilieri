@@ -10,6 +10,10 @@ class FooterAdmin(admin.ModelAdmin):
 class ServicioAdmin(admin.ModelAdmin):
     list_display = ('nombre','descripcion')
 
+class ContactoAdmin(admin.ModelAdmin):
+    list_display = ('nombre','asunto','fecha')
+
 admin.site.register(Home,HomeAdmin)
 admin.site.register(footer,FooterAdmin)
 admin.site.register(Servicio,ServicioAdmin)
+admin.site.register(Contacto,ContactoAdmin)

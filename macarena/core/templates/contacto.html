@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container fcc">
+  <!-- formulario de contacto -->
+  <div class="col-lg-6 col-md-12 mt-5">
+    <h2>Nos pongamos en contacto!</h2>
+    <form action="#servicios_contacto" class="form" method="post" id="form">
+      {% csrf_token %}
+      <!-- nombre y apellido -->
+      <div class="form-group">
+        <label for="id_nombre">Nombre y apellido</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="id_nombre" 
+          name="nombre" 
+          maxlength="60" 
+          placeholder="Nombre y apellido"
+          required="required"
+        >
+      </div>
+      <!-- Email -->
+      <div class="form-group">
+        <label for="id_email">E-mail</label>
+        <input 
+          type="email" 
+          class="form-control" 
+          id="id_email" 
+          maxlength="254" 
+          name="email" 
+          placeholder="Email"
+          required="required"
+          >
+      </div>
+      <!-- Asunto -->
+      <div class="form-group">
+        <label for="id_asunto">Asunto</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="id_asunto" 
+          name="asunto" 
+          placeholder="Asunto"
+          required="required"
+        >
+      </div>
+      <!-- Consulta -->
+      <div class="form-group">
+        <label for="id_consulta">Consulta</label>
+        <textarea 
+          id="id_consulta" 
+          class="form-control" 
+          name="consulta"
+          rows="5"
+          required="required"
+          >
+        </textarea>
+      </div>
+      <button type="submit" class="btn btn-success mt-2">Enviar</button>
+    </form>
+    {{mensaje}}
+  </div>
+</div>
+{% endblock %}

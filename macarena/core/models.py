@@ -2,6 +2,7 @@ from django.db import models
 from django.forms import URLField
 from .fields import UniqueBooleanField
 from ckeditor.fields import RichTextField
+from datetime import datetime
 # Create your models here.
 class Home(models.Model):
     nombre_tema = models.CharField(max_length=200)
@@ -77,3 +78,12 @@ class Servicio(models.Model):
     def __str__(self):
         return self.nombre
 
+class Contacto(models.Model):
+    nombre = models.CharField(max_length=60)
+    email = models.EmailField()
+    asunto = models.CharField(max_length=355)
+    consulta = models.TextField()
+    fecha = models.DateTimeField(default=datetime.now(),editable=False)
+
+    def __str__(self):
+        return self.nombre

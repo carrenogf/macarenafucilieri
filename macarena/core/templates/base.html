@@ -26,7 +26,7 @@
   <header>
   <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
-        <a class="navbar-brand" href="{% url 'home' %}">Macarena Fucilieri</a>
+        <a class="navbar-brand bg-dark text-white p-2 rounded" href="{% url 'home' %}">Macarena Fucilieri</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,13 +39,7 @@
                     <a class="nav-link" href="{% url 'about' %}">Sobre mí</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
                 </li>
             </ul>
         </div>
