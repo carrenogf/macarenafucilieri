@@ -16,3 +16,8 @@ def serviciosView(request):
     context["range_servicios"] = range(len(servicios))
     context['tema'] = Home.objects.get(selecionado=True)
     return render(request,'Servicio_detail.html',context=context)
+
+def aboutView(request):
+    context = {}
+    context['tema'] = Home.objects.get(selecionado=True)
+    return render(request,'about.html',context=context)

@@ -92,15 +92,19 @@
       {% csrf_token %}
       <div class="form-group">
         <label for="email_input">E-mail</label>
-        <input type="email" class="form-control" id="email_input" placeholder="Email">
+        <input type="email" class="form-control" id="email_input" name="email" placeholder="Email">
       </div>
       <div class="form-group">
         <label for="nombre_input">Nombre y apellido</label>
-        <input type="text" class="form-control" id="nombre_input" placeholder="Nombre y apellido">
+        <input type="text" class="form-control" id="nombre_input" name="nombre" placeholder="Nombre y apellido">
+      </div>
+      <div class="form-group">
+        <label for="asunto_input">Asunto</label>
+        <input type="text" class="form-control" id="nombre_input" name="asunto" placeholder="Asunto">
       </div>
       <div class="form-group">
         <label for="consulta_textarea">Consulta</label>
-        <textarea id="consulta_textarea" class="form-control" rows="5"></textarea>
+        <textarea id="consulta_textarea" class="form-control" name="consulta" rows="5"></textarea>
       </div>
       <button type="submit" class="btn btn-success mt-2">Enviar</button>
     </form>
