@@ -3,7 +3,7 @@
   <!-- formulario de contacto -->
   <div class="col-lg-6 col-md-12 mt-5">
     <h2>Nos pongamos en contacto!</h2>
-    <form action="#servicios_contacto" class="form" method="post" id="form">
+    <form action="{% url 'contacto' %}" class="form" method="post" id="form">
       {% csrf_token %}
       <!-- nombre y apellido -->
       <div class="form-group">

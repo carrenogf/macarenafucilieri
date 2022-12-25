@@ -133,6 +133,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # path for the staticfiles when run collectstatic
 STATIC_ROOT= os.path.join(BASE_DIR,'static/')
 
+# EMAIL CONF
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'carrenogf@gmail.com'
+EMAIL_HOST_PASSWORD = 'ixvrigoweoqyvphn'
+EMAIL_USE_TLS = True
+
 # CKEDITOR CONFIG
 
 CKEDITOR_CONFIGS = {
